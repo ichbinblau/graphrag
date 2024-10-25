@@ -45,7 +45,7 @@ Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards.
    ```bash
    curl -x "" http://localhost:8888/v1/graphrag \
     -H "Content-Type: application/json" \
-	  -d "{\"model\": \"gpt-4o-mini\",\"messages\": [{\"role\": \"user\",\"content\": \"Who is Marie Curie and what are her scientific achievements?\"}]}"
+    -d "{\"model\": \"llama3\",\"messages\": [{\"role\": \"user\",\"content\": \"Who is Marie Curie and what are her scientific achievements?\"}]}"
    ```
 ## Tear down the services
 ```bash
