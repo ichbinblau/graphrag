@@ -11,7 +11,7 @@ Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards. Plz also d
   ```bash
   git clone https://github.com/opea-project/GenAIExamples.git
   cd GenAIExamples
-  git fetch origin pull/1007/head:gr
+  git fetch origin pull/1007/head:gr # todo: update the branch when the PR gets merged
   git switch gr
   cd ..
   ```
