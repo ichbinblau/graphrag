@@ -29,7 +29,7 @@ services:
     ports:
       - "6006:80"
     volumes:
-      - "/scratch-1/opea-models:/data"
+      - "./data:/data"
     shm_size: 1g
     environment:
       no_proxy: ${no_proxy}
@@ -45,7 +45,7 @@ services:
     ports:
       - "6005:80"
     volumes:
-      - "/scratch-1/opea-models:/data"
+      - "./data:/data"
     environment:
       no_proxy: ${no_proxy}
       NO_PROXY: ${no_proxy}
