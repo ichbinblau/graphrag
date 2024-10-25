@@ -29,7 +29,7 @@ Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards.
   ```bash
   cp script.sh GenAIExamples/GraphRAG/
   cp file-curie.txt GenAIExamples/GraphRAG/
-  cp GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/compose.yaml GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/compose-noshard.yaml
+  mv GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/compose.yaml GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/compose-noshard.yaml
   cp compose.yaml GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/
   ./script.sh # it would take a few mins to download llama3 model for the first time. 
   ```
