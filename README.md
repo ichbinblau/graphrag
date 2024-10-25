@@ -16,11 +16,11 @@ Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards.
   ```
 2. Set up the environment variables.
   ```bash
-   export host_ip=${your_hostname IP} #local IP, i.e "192.168.1.1"
    export HUGGINGFACEHUB_API_TOKEN=${your_hf_token} # needed for TGI/TEI models as we use llama3 model, apply for the token thru the url https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct
    ```
    If you are in a proxy environment, also set the proxy-related environment variables:
    ```bash
+   export host_ip=${your_hostname IP} #local IP, i.e "192.168.1.1"
    export http_proxy="Your_HTTP_Proxy"
    export https_proxy="Your_HTTPs_Proxy"
    export no_proxy=$no_proxy,${host_ip} #important to add {host_ip} for containers communication
@@ -47,4 +47,13 @@ Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards.
     -H "Content-Type: application/json" \
 	  -d "{\"model\": \"gpt-4o-mini\",\"messages\": [{\"role\": \"user\",\"content\": \"Who is Marie Curie and what are her scientific achievements?\"}]}"
    ```
+## Tear down the services
+```bash
+cd GenAIExamples/GraphRAG/docker_compose/intel/hpu/gaudi/
+export host_ip=${your_hostname IP} #local IP, i.e "192.168.1.1"
+source ./set_env.sh
+export HUGGINGFACEHUB_API_TOKEN=${your_hf_token}
+export NEO4J_PASSWORD=password 
+docker compose down
+```
 
