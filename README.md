@@ -1,11 +1,12 @@
 # GraphRAG Setup on Intel Gaudi2
-The guide is evaluated based on the [GenAIExample PR](https://github.com/opea-project/GenAIExamples/pull/1007) and [GenAIComps PR](https://github.com/opea-project/GenAIComps/pull/793)
+The guide is evaluated based on the [GenAIExample PR](https://github.com/opea-project/GenAIExamples/pull/1007) and [GenAIComps PR](https://github.com/opea-project/GenAIComps/pull/793). 
+
+## Quick Start Deployment Steps:
 The GraphRAG services can be deployed on Intel Gaudi2 and Intel Xeon Scalable Processors. GraphRAG quality depends heavily on the ability to extract a high quality graph. It is highly recommended to use the best model available to you. 
 If you use Intel Xeon, it is better to use OpenAI for graph extraction and community building. 
 If you use Intel Gaudi2, a high-quality model is recommended for better performance. 
 Our current evaluation runs llama3 70b model on 8 Intel Gaudi2 cards. 
 
-## Quick Start Deployment Steps:
 1. Checkout GraphRAG source code
   ```bash
   git clone https://github.com/opea-project/GenAIExamples.git
